@@ -1,0 +1,182 @@
+/* Style géneral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* En-tête */
+header {
+    background-color: chocolate;
+    color: white;
+    padding: 20px;
+    text-align: center ;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+/* Grille */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Contenu principal */
+main{
+    padding: 20px;
+   text-align: center;
+}
+
+
+.Nouv-section {
+    background-color: #ffcc00;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+/* Pied de page */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+       /* Adapter le menu */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Adapter la grille */
+    .grid-container {
+        grid-template-columns: 1fr; /* Une seule colonne */
+    }
+
+     /* Adapter la nouvelle section */
+    .Nouv-section {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+
+.grid-item {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'élément au survol */
+}
+
+/*transition: transform 0.3s ease-in-out; → Rend l'effet fluide
+.grid-item:hover → Quand on passe la souris, l'élément s'agrandit*/
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    animation: apparition 1s ease-in-out;
+}
+
+.btn_clic {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.bbtn_clictn:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+.btn_clic:active {
+    background-color: #1e7e34;
+    transform: scale(0.95);
+}
+
+/*📌 Explication :
+
+.btn → Style de base avec une couleur verte
+.btn:hover → Au survol, le bouton devient plus foncé et plus grand
+.btn:active → Au clic, il devient encore plus foncé et rétrécit légèrement*/
+
+/*
+/mon-projet/
+│── /css/         → Fichiers CSS  
+│    ├── style.css  
+│── /images/      → Images du projet  
+│── /js/          → Fichiers JavaScript (si besoin)  
+│── index.html    → Page principale  
+*/
+
+.logo_inth {
+    width: 80px;
+    height: auto;    
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.star {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin:  10px;
+    border-radius: 10px;
+}
+
+/*📌 Explication :
+
+width: 100% → L’image s’adapte à la largeur du conteneur.
+max-width: 500px → L’image ne dépasse pas 500px.
+border-radius: 10px → Coins arrondis.
+*/
